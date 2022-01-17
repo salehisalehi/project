@@ -1,0 +1,46 @@
+@mixin transition($property: background) {
+  transition: $property 0.3s linear;
+}
+
+@mixin border() {
+  border: 0.1rem solid transparent;
+  border-radius: 1rem;
+  outline: none !important;
+}
+
+@mixin lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin space {
+  @include lg() {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    padding-right: 8rem;
+    padding-left: 8rem;
+  }
+
+  margin-top: 1.5rem;
+  margin-bottom: 7rem;
+}
+
+@mixin signupType {
+  @include transition(background);
+  @include border();
+  width: 55%;
+
+  color: #ffffff;
+  background: $second;
+
+  &:hover {
+    background: lighten($second, 10%);
+  }
+}

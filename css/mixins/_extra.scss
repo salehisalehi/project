@@ -1,0 +1,45 @@
+@include lg() {
+  .link {
+    border-right: 0.02rem #ffffff solid;
+    padding: 0 0.7rem;
+  }
+
+  .link-x {
+    padding-left: 0.7rem;
+  }
+
+  .pr-lg-x {
+    padding-right: 11.5rem;
+  }
+}
+
+.md-visible {
+  // visibility: hidden;
+  display: none;
+
+  @include lg() {
+    // visibility: visible;
+    display: block;
+  }
+}
+
+.sm-visible {
+  display: block;
+
+  @include lg() {
+    display: none;
+  }
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.ltr {
+  direction: ltr;
+}
